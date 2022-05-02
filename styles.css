@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Desktop view / Genral design */
+
+body{
+    background-image: url("images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position:  bottom;
+    background-color: hsl(229, 57%, 11%);
+    font-family: "Raleway";
+}
+
+main{
+   display: grid;
+justify-content: center;
+    position: relative;
+    padding: 15rem ;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20rem 30rem;
+    gap: 1.9rem;
+    align-items: flex-start;
+}
+/* First container */
+
+.first-container{
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+    border-radius: .8rem 6rem .8rem .8rem;
+}
+.logo{
+    padding-bottom: 1.5rem;
+}
+.files{
+    display: grid;
+    grid-template-columns: repeat(3, 3.5rem);
+    gap: .7rem;
+    text-align: center;
+    padding-bottom: .8rem;
+}
+/* Docs */
+
+.doc{
+    background-color: hsl(229, 57%, 11%);
+    padding: .9rem 0 .7rem;
+    border-radius: .8rem;
+}
+.doc:nth-child(2) {
+    padding-top: 1rem;
+}
+.doc:nth-child(3){
+   padding-top: 1.1rem;
+}
+
+/* Second Container */
+.second-container {
+    background-color: hsl(228, 56%, 26%);
+    padding: 2.5rem 2rem 2rem;
+    border-radius: .8rem;
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+
+/* white background */
+.gb-bottom{
+    display: none;
+}
+.gb-left{
+    display: flex;
+align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    padding: .4rem 0rem .4rem 1.2rem;
+    border-radius: .4rem .4rem 0 .4rem;
+    top: -2.2rem;
+    right: 2rem;
+    text-align: center;
+
+}
+.gb-left::after{
+    border-color: transparent hsl(0, 0%, 100%) transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 20px;
+    top: 20px;
+    content: "";
+    display: block;
+    position: relative;
+}
+h1{
+    font-size: 2.2rem;
+}
+
+.gb-left p, .gb-bottom p{
+    font-size: .8rem;
+    padding-left: .8rem;
+    font-weight: bolder;
+    color: hsl(229, 7%, 55%);
+    
+}
+
+
+/* first paragraph */
+.text{
+    padding-bottom: 1rem;
+    font-size: .86rem;
+    color: hsl(243, 100%, 93%);
+}
+span{
+    font-weight: bold;
+}
+
+/* Loading box */
+.loading-box{
+    padding: .2rem;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 50px;
+}
+
+.load-gradient{
+    background: linear-gradient(45deg, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    padding: .1rem;
+    border-radius: 50px;
+    width: 75%;
+}
+.white-circle{
+    background: hsl(243, 100%, 93%);
+    padding: .3rem;
+    border-radius: 100px;
+    width: 1%;
+    margin-left: auto;
+}
+
+/* last paragraphs */
+.last-text{
+    padding: .8rem 0 0;
+    display: flex;
+    font-size: .8rem;
+    font-weight: bold;
+    color: hsl(243, 100%, 93%);
+}
+.right{
+    margin-left: auto;
+}
+
+/* Footer / Atrribution */
+.attribution {
+    text-align: center;
+    font-size: .8rem;
+    padding: 0 2rem 3rem;
+    font-weight: 600;
+    color: hsl(243, 100%, 93%);
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: .8rem;
+    color: hsl(6, 100%, 80%);
+}
+
+
+/* Media Queries */
+
+
+
+/* Mobile view */
+
+@media only screen and (max-width: 53.75rem) {
+    body {
+        background-image: url("images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: hsl(229, 57%, 11%);
+        font-family: "Raleway";
+    }
+    
+    main {
+        display: block;
+        position: relative;
+        padding: 10rem 3rem;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+    }
+    .second-container, .first-container {
+        min-height: 11rem;
+    }
+    .text {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .gb-left {
+       display: none;
+    }
+    .gb-left::after {
+        border-style: none;
+    }
+    .gb-bottom {
+        display: flex;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+        padding: 1rem 2rem; 
+        border-radius: .7rem;
+        bottom: -2.3rem;
+        left: 5rem;
+    }
+    
+}
+
+/* Tablet view */
+
+@media only screen and (max-width: 53.75rem) and (min-width: 32.25rem){
+    main {
+        display: block;
+        position: relative;
+        padding: 10rem 5rem;
+    }
+    .gb-bottom {
+        display: flex;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+        padding: 1rem 1.5rem;
+        border-radius: .7rem;
+        bottom: -2.3rem;
+        justify-content: center;
+        left: 25%;
+        right: 25%;
+    }
+}
