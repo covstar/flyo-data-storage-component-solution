@@ -10,7 +10,7 @@ body{
     background-repeat: no-repeat;
     background-position:  bottom;
     background-color: hsl(229, 57%, 11%);
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
 }
 
 main{
